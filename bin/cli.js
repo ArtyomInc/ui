@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from 'commander'
 import { promises as fs } from 'fs'
 import inquirer from 'inquirer'
@@ -5,7 +6,7 @@ import path from 'path'
 
 const program = new Command()
 
-program.version('1.0.0').description('Welcome to the CLI of @artyominc/ui')
+program.version('1.0.4').description('Welcome to the CLI of @artyominc/ui')
 
 program
   .command('start')
