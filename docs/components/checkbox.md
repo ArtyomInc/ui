@@ -1,0 +1,27 @@
+# Checkbox
+
+A control that allows the user to toggle between checked and not checked.
+
+Example of usage :
+
+<ClientOnly>
+  <ExampleOfCheckbox />
+</ClientOnly>
+
+```vue
+<script setup lang="ts">
+import { Checkbox } from '@/components/ui/checkbox'
+</script>
+
+<template>
+  <div class="flex items-center space-x-2">
+    <Checkbox id="terms" />
+    <label
+      for="terms"
+      class="select-none text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+    >
+      Accept terms and conditions
+    </label>
+  </div>
+</template>
+```
