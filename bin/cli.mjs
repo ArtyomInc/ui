@@ -61,8 +61,7 @@ const program = new Command()
 
 program
   .command('start')
-  .version('1.0.7')
-  .description('Start the interactive CLI')
+  .description('Global setup of the UI library')
   .action(async () => {
     console.log('Welcome to the CLI of @artyominc/ui')
 
@@ -165,6 +164,33 @@ program
     })
     if (resComponentsSelected.length == 0) {
       console.log('No components selected')
+    }
+  })
+
+program
+  .command('add <component>')
+  .description('Add a specific component to your project')
+  .action(async (component) => {
+    console.log('Welcome to the CLI of @artyominc/ui')
+    if (!components.find((c) => c.name === component)) {
+      console.error(`Component ${component} not found`)
+      return
+    } else {
+      console.log(`Importing ${component} ...`)
+      const componentRelatedFiles = components.find((c) => c.name === component).files
+      // Ask for where the components will be imported
+      const { resComponentLocation } = await inquirer.prompt([
+        {
+          default: 'src/components/ui',
+          message: `Where do you want to import ${component} component ?`,
+          name: 'resComponentLocation',
+          type: 'input'
+        }
+      ])
+      // Import files
+      componentRelatedFiles.forEach(async (file) => {
+        await importAndWriteFile(resComponentLocation, component, file)
+      })
     }
   })
 

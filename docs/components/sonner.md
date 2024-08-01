@@ -1,11 +1,20 @@
-Sonner
+# Sonner
+
 A succinct message that is displayed temporarily.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add sonner
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfSonner />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

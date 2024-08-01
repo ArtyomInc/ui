@@ -2,11 +2,19 @@
 
 Displays a button or a component that looks like a button.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add button
+```
+
+## Preview
 
 <ClientOnly>
-  <ExampleOfButton/>
+  <ExampleOfButton />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

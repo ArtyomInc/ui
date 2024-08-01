@@ -2,11 +2,19 @@
 
 A vertically stacked set of interactive headings that each reveal a section of content.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add accordion
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfAccordion />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

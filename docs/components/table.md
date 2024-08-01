@@ -2,11 +2,19 @@
 
 A responsive table component.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add table
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfTable />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

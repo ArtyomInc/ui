@@ -2,11 +2,19 @@
 
 Displays a badge or a component that looks like a badge.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add badge
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfBadge />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

@@ -2,11 +2,19 @@
 
 An icon button to switch theme appearance.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add theme-button
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfThemeButton/>
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

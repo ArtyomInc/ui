@@ -2,11 +2,19 @@
 
 A two-state button that can be either on or off.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add toggle
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfToggle/>
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

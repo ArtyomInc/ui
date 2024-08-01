@@ -2,11 +2,19 @@
 
 Displays a form input field or a component that looks like an input field.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add input
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfInput />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

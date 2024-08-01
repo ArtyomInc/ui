@@ -2,11 +2,19 @@
 
 A dialog that interrupts the user with important content and expects a response.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add dialog
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfDialog />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

@@ -2,11 +2,19 @@
 
 Extends the Dialog component to display content that complements the main content of the screen.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add sheet
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfSheet />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

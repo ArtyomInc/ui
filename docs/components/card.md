@@ -2,13 +2,21 @@
 
 Displays a card.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add card
+```
+
+## Preview
 
 <ClientOnly>
   <div class="bg-neutral-100 p-3 rounded-lg dark:bg-transparent">
     <ExampleOfCard/>
   </div>
 </ClientOnly>
+
+### Code
 
 ```vue
 <script setup lang="ts">

@@ -2,11 +2,19 @@
 
 Displays a list of options for the user to pick from—triggered by a button.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add select
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfSelect />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

@@ -2,11 +2,19 @@
 
 Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add progress
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfProgress />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">

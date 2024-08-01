@@ -2,11 +2,19 @@
 
 Use to show a placeholder while content is loading.
 
-Example of usage :
+## CLI
+
+```sh
+npx @artyominc/ui add skeleton
+```
+
+## Preview
 
 <ClientOnly>
   <ExampleOfSkeleton />
 </ClientOnly>
+
+## Code
 
 ```vue
 <script setup lang="ts">
