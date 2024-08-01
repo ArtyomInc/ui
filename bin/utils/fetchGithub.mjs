@@ -1,4 +1,4 @@
-async function fetchContentFile(owner, repo, path) {
+async function fetchGithub(owner, repo, path) {
   const url = `https://raw.githubusercontent.com/${owner}/${repo}/main/${path}`
   return fetch(url)
     .then((response) => {
@@ -12,4 +12,4 @@ async function fetchContentFile(owner, repo, path) {
     })
 }
 
-export default fetchContentFile
+export default fetchGithub
