@@ -62,7 +62,7 @@ const program = new Command()
 
 program
   .command('start')
-  .version('1.0.5')
+  .version('1.0.6')
   .description('Start the interactive CLI')
   .action(async () => {
     console.log('Welcome to the CLI of @artyominc/ui')
