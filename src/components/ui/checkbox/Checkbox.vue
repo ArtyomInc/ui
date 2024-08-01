@@ -23,13 +23,13 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'h-5 w-5 shrink-0 rounded border border-border [border-style:solid] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-none dark:shadow',
+        'h-5 w-5 shrink-0 rounded border border-border transition-colors [border-style:solid] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-none dark:shadow',
         props.class
       )
     "
   >
     <CheckboxIndicator
-      class="flex h-full w-full items-center justify-center rounded bg-primary text-primary-foreground"
+      class="flex h-full w-full items-center justify-center rounded bg-primary text-primary-foreground transition-colors"
     >
       <slot>
         <Icon icon="lucide:check" class="h-4 w-4" />

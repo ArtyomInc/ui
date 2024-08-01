@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Quickstart
-      link: /dependencies/iconify-vue
+      link: /guide/get-started
     - theme: alt
       text: Components
       link: /components/accordion

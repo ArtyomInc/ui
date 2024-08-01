@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { type ToggleProps } from 'radix-vue'
-import { type HTMLAttributes, ref } from 'vue'
+import { cn } from '@/lib/utils'
+import { Toggle, type ToggleEmits, type ToggleProps, useForwardPropsEmits } from 'radix-vue'
+import { type HTMLAttributes, computed } from 'vue'
 
-import { type ToggleVariants } from '.'
+import { type ToggleVariants, toggleVariants } from '.'
 
 const props = withDefaults(
   defineProps<
     ToggleProps & {
-      modelValue: boolean
       class?: HTMLAttributes['class']
       variant?: ToggleVariants['variant']
       size?: ToggleVariants['size']
@@ -20,26 +20,19 @@ const props = withDefaults(
   }
 )
 
-const emit = defineEmits<{
-  (e: 'update:modelValue', value: boolean): void
-}>()
+const emits = defineEmits<ToggleEmits>()
 
-const toggle = () => {
-  state.value = !state.value
-  emit('update:modelValue', state.value)
-}
+const delegatedProps = computed(() => {
+  const { class: _, size, variant, ...delegated } = props
 
-const state = ref(props.modelValue)
+  return delegated
+})
+
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <button
-    class="relative inline-flex h-5 w-9 flex-shrink-0 rounded-full border-2 border-transparent bg-foreground transition-[background-color] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-    @click="toggle"
-  >
-    <span
-      class="pointer-events-none relative left-0.5 top-0.5 inline-block h-4 w-4 rounded-full bg-default transition-[background-color_transform] duration-200 ease-in-out"
-      :class="{ 'translate-x-0': !state, 'translate-x-4': state }"
-    />
-  </button>
+  <Toggle v-bind="forwarded" :class="cn(toggleVariants({ variant, size }), props.class)">
+    <slot />
+  </Toggle>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useSonnerStore } from './Sonner'
+import { useSonner } from './Sonner'
 
-const sonner = useSonnerStore()
+const sonner = useSonner()
 </script>
 
 <template>
@@ -15,7 +15,9 @@ const sonner = useSonnerStore()
       leave-to-class="opacity-20 -translate-y-8"
     >
       <div v-if="sonner.state" class="fixed bottom-0 right-0 z-50 flex flex-col gap-1 p-2">
-        <div class="relative w-[calc(100vw-1rem)] overflow-hidden rounded bg-default p-2 md:w-[20rem]">
+        <div
+          class="relative w-[calc(100vw-1rem)] overflow-hidden rounded-lg border border-border/30 bg-default p-3 shadow-lg md:w-[20rem]"
+        >
           <div v-if="sonner.state.description">
             <h4 class="truncate font-semibold">
               {{ sonner.state.title }}

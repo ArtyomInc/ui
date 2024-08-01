@@ -1,10 +1,10 @@
 {
   "name": "@artyominc/ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
-  "main": "bin/cli.js",
+  "main": "bin/cli.mjs",
   "bin": {
-    "artyom-ui": "bin/cli.js"
+    "artyom-ui": "bin/cli.mjs"
   },
   "author": "ArtyomInc",
   "license": "MIT",
@@ -44,8 +44,6 @@
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.7",
     "tailwindcss-animate": "^1.0.7",
-    "vitepress": "^1.3.1",
-    "vue-sonner": "^1.1.4",
-    "zod": "^3.23.8"
+    "vitepress": "^1.3.1"
   }
 }

@@ -10,9 +10,9 @@ Example of usage :
 ```vue
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
-import { Sonner, useSonnerStore } from '@/components/ui/sonner'
+import { Sonner, useSonner } from '@/components/ui/sonner'
 
-const sonner = useSonnerStore()
+const sonner = useSonner()
 </script>
 
 <template>

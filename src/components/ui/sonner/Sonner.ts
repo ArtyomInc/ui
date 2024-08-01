@@ -7,7 +7,7 @@ interface Sonner {
   type?: 'danger'
 }
 
-export const useSonnerStore = defineStore('sonner', () => {
+export const useSonner = defineStore('sonner', () => {
   const state = ref<Sonner | null>(null)
   const duration = 3000
   let appearTimeout: Timer
@@ -32,4 +32,4 @@ export const useSonnerStore = defineStore('sonner', () => {
   return { duration, remove, state, trig }
 })
 
-export default useSonnerStore
+export default useSonner

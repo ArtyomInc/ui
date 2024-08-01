@@ -39,9 +39,26 @@ import { Sheet } from '@/components/ui/sheet'
 // @ts-ignore
 import ExampleOfSheet from '@/samples/Sheet.vue'
 // @ts-ignore
+import { Skeleton } from '@/components/ui/skeleton'
+// @ts-ignore
+import ExampleOfSkeleton from '@/samples/Skeleton.vue'
+// @ts-ignore
 import { Sonner } from '@/components/ui/sonner'
 // @ts-ignore
 import ExampleOfSonner from '@/samples/Sonner.vue'
+// @ts-ignore
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableEmpty,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow
+} from '@/components/ui/table'
+// @ts-ignore
+import ExampleOfTable from '@/samples/Table.vue'
 // @ts-ignore
 import { ThemeButton } from '@/components/ui/theme-button'
 // @ts-ignore
@@ -50,6 +67,10 @@ import ExampleOfThemeButton from '@/samples/ThemeButton.vue'
 import { Toggle } from '@/components/ui/toggle'
 // @ts-ignore
 import ExampleOfToggle from '@/samples/Toggle.vue'
+// @ts-ignore
+import { Tooltip } from '@/components/ui/tooltip'
+// @ts-ignore
+import ExampleOfTooltip from '@/samples/Tooltip.vue'
 import { createPinia } from 'pinia'
 import DefaultTheme from 'vitepress/theme'
 import './styles/main.css'
@@ -93,14 +114,30 @@ export default {
     //Sheet
     app.component('Sheet', Sheet)
     app.component('ExampleOfSheet', ExampleOfSheet)
+    //Skeleton
+    app.component('Skeleton', Skeleton)
+    app.component('ExampleOfSkeleton', ExampleOfSkeleton)
     //Sonner
     app.component('Sonner', Sonner)
     app.component('ExampleOfSonner', ExampleOfSonner)
+    //Table
+    app.component('Table', Table)
+    app.component('TableBody', TableBody)
+    app.component('TableCell', TableCell)
+    app.component('TableEmpty', TableEmpty)
+    app.component('TableFooter', TableFooter)
+    app.component('TableHead', TableHead)
+    app.component('TableHeader', TableHeader)
+    app.component('TableRow', TableRow)
+    app.component('ExampleOfTable', ExampleOfTable)
     //ThemeButton
     app.component('ThemeButton', ThemeButton)
     app.component('ExampleOfThemeButton', ExampleOfThemeButton)
     //Toggle
     app.component('Toggle', Toggle)
     app.component('ExampleOfToggle', ExampleOfToggle)
+    //Tooltip
+    app.component('Tooltip', Tooltip)
+    app.component('ExampleOfTooltip', ExampleOfTooltip)
   }
 }

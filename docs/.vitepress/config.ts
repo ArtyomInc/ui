@@ -18,18 +18,16 @@ export default defineConfig({
     siteTitle: 'UI Components',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Dependencies', link: '/dependencies/iconify-vue' },
+      { text: 'Guide', link: '/guide/get-started' },
       { text: 'Components', link: '/components/accordion' }
     ],
 
     sidebar: [
       {
-        text: 'Dependencies',
+        text: 'Guide',
         items: [
-          { text: '@iconify/vue', link: '/dependencies/iconify-vue' },
-          { text: 'pinia', link: '/dependencies/pinia' },
-          { text: 'tailwindcss', link: '/dependencies/tailwindcss' },
-          { text: '@vueuse/core', link: '/dependencies/vueuse-core' }
+          { text: 'Get Started', link: '/guide/get-started' },
+          { text: 'Installation', link: '/guide/installation' }
         ]
       },
       {
@@ -45,9 +43,12 @@ export default defineConfig({
           { text: 'Progress', link: '/components/progress' },
           { text: 'Select', link: '/components/select' },
           { text: 'Sheet', link: '/components/sheet' },
+          { text: 'Skeleton', link: '/components/skeleton' },
           { text: 'Sonner', link: '/components/sonner' },
+          { text: 'Table', link: '/components/table' },
           { text: 'ThemeButton', link: '/components/theme-button' },
-          { text: 'Toggle', link: '/components/toggle' }
+          { text: 'Toggle', link: '/components/toggle' },
+          { text: 'Tooltip', link: '/components/tooltip' }
         ]
       }
     ],

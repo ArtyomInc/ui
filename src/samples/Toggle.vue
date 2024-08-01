@@ -6,6 +6,8 @@ const value = ref(false)
 </script>
 
 <template>
-  <Toggle v-model="value" />
+  <div class="flex items-center space-x-2">
+    <Toggle id="terms" v-model:pressed="value">T</Toggle>
+  </div>
   {{ value }}
 </template>
