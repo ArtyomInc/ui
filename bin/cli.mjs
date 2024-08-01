@@ -16,7 +16,6 @@ const dependencies = [
   { dev: false, name: 'pinia' },
   { dev: false, name: 'radix-vue' },
   { dev: false, name: 'tailwind-merge' },
-  { dev: false, name: 'tailwindcss' },
   { dev: false, name: 'tailwindcss-animate' }
 ]
 
@@ -62,7 +61,7 @@ const program = new Command()
 
 program
   .command('start')
-  .version('1.0.6')
+  .version('1.0.7')
   .description('Start the interactive CLI')
   .action(async () => {
     console.log('Welcome to the CLI of @artyominc/ui')
