@@ -15,7 +15,7 @@ const emit = defineEmits<{ (e: 'update:modelValue', value: string): void }>()
       :disabled="props.disabled"
       :class="
         cn(
-          'flex h-8 items-center justify-center gap-2 whitespace-nowrap text-nowrap rounded-lg border border-border bg-default px-2 pr-7 align-middle text-default-foreground no-underline outline-none [border-style:solid] focus:border-ring disabled:cursor-not-allowed disabled:opacity-50',
+          'flex h-8 items-center justify-center gap-2 whitespace-nowrap text-nowrap rounded-lg border border-border bg-default px-2 pr-7 align-middle text-default-foreground no-underline outline-none [border-style:solid] focus:border-ring disabled:pointer-events-none disabled:opacity-50',
           props.class
         )
       "
@@ -24,7 +24,7 @@ const emit = defineEmits<{ (e: 'update:modelValue', value: string): void }>()
       <slot />
     </select>
     <Icon
-      :class="{ 'cursor-not-allowed opacity-50': props.disabled }"
+      :class="{ 'pointer-events-none opacity-50': props.disabled }"
       class="absolute right-2 top-1 h-6"
       icon="lucide:chevrons-up-down"
     />

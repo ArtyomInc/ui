@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { Checkbox } from '@/components/ui/checkbox'
+import { Switch } from '@/components/ui/switch'
 import { ref } from 'vue'
 
 const value = ref(false)
 </script>
 
 <template>
-  <Checkbox v-model="value">Accept terms and conditions</Checkbox>
+  <Switch v-model="value">Airplane Mode</Switch>
   {{ value }}
 </template>

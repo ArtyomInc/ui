@@ -28,18 +28,18 @@ import { Button } from '@/components/ui/button'
 
 ## Variant props value
 
-| Variants value | Looks                                                               |
-| -------------- | ------------------------------------------------------------------- |
-|                | <ClientOnly><Button >Default</Button></ClientOnly>                  |
-| primary        | <ClientOnly><Button variant="primary">Primary</Button></ClientOnly> |
-| danger         | <ClientOnly><Button variant="danger">Danger</Button></ClientOnly>   |
+| Variant value | Looks                                                               |
+| ------------- | ------------------------------------------------------------------- |
+|               | <ClientOnly><Button >Default</Button></ClientOnly>                  |
+| primary       | <ClientOnly><Button variant="primary">Primary</Button></ClientOnly> |
+| danger        | <ClientOnly><Button variant="danger">Danger</Button></ClientOnly>   |
 
 ## Size props value
 
-| Variants value | Looks                                                      |
-| -------------- | ---------------------------------------------------------- |
-|                | <ClientOnly><Button >Default</Button></ClientOnly>         |
-| icon           | <ClientOnly><Button size="icon">Icon</Button></ClientOnly> |
+| Sizes value | Looks                                                      |
+| ----------- | ---------------------------------------------------------- |
+|             | <ClientOnly><Button >Default</Button></ClientOnly>         |
+| icon        | <ClientOnly><Button size="icon">Icon</Button></ClientOnly> |
 
 ## Disabled
 

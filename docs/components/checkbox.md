@@ -25,15 +25,19 @@ const value = ref(false)
 </script>
 
 <template>
-  <div class="flex items-center space-x-2">
-    <Checkbox id="terms" v-model:checked="value" />
-    <label
-      for="terms"
-      class="select-none text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-    >
-      Accept terms and conditions
-    </label>
-  </div>
+  <Checkbox v-model="value">Accept terms and conditions</Checkbox>
   {{ value }}
 </template>
 ```
+
+## Disabled
+
+| Prop name | Type    | Looks                                                                      |
+| --------- | ------- | -------------------------------------------------------------------------- |
+| disabled  | boolean | <ClientOnly><Checkbox disabled >Disabled Checkbox</Checkbox> </ClientOnly> |
+
+## Multi-line content
+
+| Looks                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------ |
+| <ClientOnly><Checkbox disabled > The checkbox can display content<br/> on multiple lines.</Checkbox> </ClientOnly> |

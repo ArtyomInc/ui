@@ -1,38 +1,38 @@
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
-import { Toggle, type ToggleEmits, type ToggleProps, useForwardPropsEmits } from 'radix-vue'
-import { type HTMLAttributes, computed } from 'vue'
+import { ref } from 'vue'
 
-import { type ToggleVariants, toggleVariants } from '.'
+const props = defineProps<{
+  modelValue: boolean
+  class?: string
+  disabled?: false
+}>()
 
-const props = withDefaults(
-  defineProps<
-    ToggleProps & {
-      class?: HTMLAttributes['class']
-      variant?: ToggleVariants['variant']
-      size?: ToggleVariants['size']
-    }
-  >(),
-  {
-    disabled: false,
-    size: 'default',
-    variant: 'default'
-  }
-)
+const emits = defineEmits<{
+  (e: 'update:modelValue', value: boolean): void
+}>()
 
-const emits = defineEmits<ToggleEmits>()
+const value = ref(props.modelValue)
 
-const delegatedProps = computed(() => {
-  const { class: _, size, variant, ...delegated } = props
-
-  return delegated
-})
-
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+function toggle() {
+  if (props.disabled) return
+  value.value = !value.value
+  emits('update:modelValue', value.value)
+}
 </script>
 
 <template>
-  <Toggle v-bind="forwarded" :class="cn(toggleVariants({ variant, size }), props.class)">
+  <button
+    :class="
+      cn(
+        'inline-flex h-8 w-8 items-center justify-center rounded-md bg-default text-sm font-medium transition-colors hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+        { 'bg-foreground/10 text-foreground hover:bg-foreground/10': value },
+        props.class
+      )
+    "
+    :disabled="props.disabled"
+    @click="toggle"
+  >
     <slot />
-  </Toggle>
+  </button>
 </template>

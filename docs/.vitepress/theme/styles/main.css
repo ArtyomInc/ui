@@ -6,3 +6,6 @@
   background: linear-gradient(140deg, #6f73d2, #00ff3f);
   filter: blur(3rem);
 }
+html {
+  background-color: hsl(var(--primary));
+}

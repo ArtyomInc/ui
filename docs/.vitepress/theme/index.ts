@@ -27,6 +27,10 @@ import { Input } from '@/components/ui/input'
 // @ts-ignore
 import ExampleOfInput from '@/samples/Input.vue'
 // @ts-ignore
+import { NumberField } from '@/components/ui/number-field'
+// @ts-ignore
+import ExampleOfNumberField from '@/samples/NumberField.vue'
+// @ts-ignore
 import { Progress } from '@/components/ui/progress'
 // @ts-ignore
 import ExampleOfProgress from '@/samples/Progress.vue'
@@ -43,9 +47,17 @@ import { Skeleton } from '@/components/ui/skeleton'
 // @ts-ignore
 import ExampleOfSkeleton from '@/samples/Skeleton.vue'
 // @ts-ignore
+import { Slider } from '@/components/ui/slider'
+// @ts-ignore
+import ExampleOfSlider from '@/samples/Slider.vue'
+// @ts-ignore
 import { Sonner } from '@/components/ui/sonner'
 // @ts-ignore
 import ExampleOfSonner from '@/samples/Sonner.vue'
+// @ts-ignore
+import { Switch } from '@/components/ui/switch'
+// @ts-ignore
+import ExampleOfSwitch from '@/samples/Switch.vue'
 // @ts-ignore
 import {
   Table,
@@ -59,6 +71,14 @@ import {
 } from '@/components/ui/table'
 // @ts-ignore
 import ExampleOfTable from '@/samples/Table.vue'
+// @ts-ignore
+import { Tab, Tabs } from '@/components/ui/tabs'
+// @ts-ignore
+import ExampleOfTabs from '@/samples/Tabs.vue'
+// @ts-ignore
+import { TextArea } from '@/components/ui/text-area'
+// @ts-ignore
+import ExampleOfTextArea from '@/samples/TextArea.vue'
 // @ts-ignore
 import { ThemeButton } from '@/components/ui/theme-button'
 // @ts-ignore
@@ -105,6 +125,9 @@ export default {
     //Input
     app.component('Input', Input)
     app.component('ExampleOfInput', ExampleOfInput)
+    //NumberField
+    app.component('NumberField', NumberField)
+    app.component('ExampleOfNumberField', ExampleOfNumberField)
     //Progress
     app.component('Progress', Progress)
     app.component('ExampleOfProgress', ExampleOfProgress)
@@ -117,9 +140,15 @@ export default {
     //Skeleton
     app.component('Skeleton', Skeleton)
     app.component('ExampleOfSkeleton', ExampleOfSkeleton)
+    //Slider
+    app.component('Slider', Slider)
+    app.component('ExampleOfSlider', ExampleOfSlider)
     //Sonner
     app.component('Sonner', Sonner)
     app.component('ExampleOfSonner', ExampleOfSonner)
+    //Switch
+    app.component('Switch', Switch)
+    app.component('ExampleOfSwitch', ExampleOfSwitch)
     //Table
     app.component('Table', Table)
     app.component('TableBody', TableBody)
@@ -130,6 +159,13 @@ export default {
     app.component('TableHeader', TableHeader)
     app.component('TableRow', TableRow)
     app.component('ExampleOfTable', ExampleOfTable)
+    //Tabs
+    app.component('Tabs', Tabs)
+    app.component('Tab', Tab)
+    app.component('ExampleOfTabs', ExampleOfTabs)
+    //TextArea
+    app.component('TextArea', TextArea)
+    app.component('ExampleOfTextArea', ExampleOfTextArea)
     //ThemeButton
     app.component('ThemeButton', ThemeButton)
     app.component('ExampleOfThemeButton', ExampleOfThemeButton)

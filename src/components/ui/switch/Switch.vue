@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/vue'
 import { type HTMLAttributes, ref } from 'vue'
 
 const props = defineProps<{
@@ -30,15 +29,22 @@ function toggle() {
     <button
       :class="
         cn(
-          'flex h-6 w-6 shrink-0 items-center justify-center rounded border border-transparent bg-primary text-primary-foreground transition-colors [border-style:solid] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
+          'pointer-events-none block w-9 rounded-full bg-default p-0.5 ring-ring transition-transform focus:ring focus-visible:outline-none',
           {
-            'border-border bg-transparent': !value
+            'bg-primary': value,
+            'bg-primary/20': !value
           },
           props.class
         )
       "
     >
-      <Icon v-show="value" icon="lucide:check" class="h-4 w-4" />
+      <span
+        class="block h-4 w-4 rounded-full bg-default transition-transform"
+        :class="{
+          'translate-x-4 shadow-lg ring-0': value,
+          'translate-x-0 shadow-lg ring-0': !value
+        }"
+      />
     </button>
     <slot />
   </div>

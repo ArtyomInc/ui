@@ -30,11 +30,14 @@ const components = [
   { files: ['index.ts', 'Checkbox.vue'], name: 'checkbox' },
   { files: ['index.ts', 'Dialog.vue'], name: 'dialog' },
   { files: ['index.ts', 'Input.vue'], name: 'input' },
+  { files: ['index.ts', 'NumberField.vue'], name: 'number-field' },
   { files: ['index.ts', 'Progress.vue'], name: 'progress' },
   { files: ['index.ts', 'Select.vue'], name: 'select' },
   { files: ['index.ts', 'Sheet.vue'], name: 'sheet' },
   { files: ['index.ts', 'Skeleton.vue'], name: 'skeleton' },
+  { files: ['index.ts', 'Slider.vue'], name: 'slider' },
   { files: ['index.ts', 'Sonner.vue'], name: 'sonner' },
+  { files: ['index.ts', 'Switch.vue'], name: 'switch' },
   {
     files: [
       'index.ts',
@@ -49,6 +52,7 @@ const components = [
     ],
     name: 'table'
   },
+  { files: ['index.ts', 'TextArea.vue'], name: 'textarea' },
   { files: ['index.ts', 'ThemeButton.vue'], name: 'theme-button' },
   { files: ['index.ts', 'Toggle.vue'], name: 'toggle' },
   {
@@ -119,9 +123,7 @@ program
       const execPromise = util.promisify(exec)
       for (const dependency of dependencies) {
         try {
-          const { stderr, stdout } = await execPromise(
-            `npm install ${dependency.dev ? '--save-dev' : '--save'} ${dependency.name}`
-          )
+          const { stderr, stdout } = await execPromise(`npm install ${dependency.dev ? '-D' : ''} ${dependency.name}`)
           if (stderr) {
             console.error(`Failed to install ${dependency.name}`)
           } else {
