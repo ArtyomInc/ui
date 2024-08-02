@@ -29,7 +29,7 @@ const doubleValue = ref([25, 75])
   <h4>Mono value</h4>
   <Slider v-model="monoValue" :max="10" :step="0.1" />
   {{ monoValue }}
-  <h4>Mono value</h4>
+  <h4>Double value</h4>
   <Slider v-model="doubleValue" :max="100" :step="1" />
   {{ doubleValue }}
 </template>
