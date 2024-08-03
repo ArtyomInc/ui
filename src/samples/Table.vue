@@ -58,8 +58,8 @@ const invoices = [
         <TableHead class="w-[100px]"> Invoice </TableHead>
         <TableHead>Status</TableHead>
         <TableHead>Method</TableHead>
-        <TableHead class="!text-right"> Amount </TableHead>
-        <TableHead class="!text-right">Action</TableHead>
+        <TableHead> Amount </TableHead>
+        <TableHead>Action</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
@@ -69,10 +69,10 @@ const invoices = [
         </TableCell>
         <TableCell>{{ invoice.paymentStatus }}</TableCell>
         <TableCell>{{ invoice.paymentMethod }}</TableCell>
-        <TableCell class="text-right">
+        <TableCell>
           {{ invoice.totalAmount }}
         </TableCell>
-        <TableCell class="flex justify-end">
+        <TableCell>
           <Button size="icon" @click="invoice.action.achieve">
             <Icon icon="lucide:archive" />
           </Button>

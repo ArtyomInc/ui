@@ -9,14 +9,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <tr
-    :class="
-      cn(
-        '!border-b !border-border !bg-transparent transition-colors ![border-bottom-style:solid] ![border-top-style:none] hover:!bg-foreground/10 data-[state=selected]:bg-default',
-        props.class
-      )
-    "
-  >
+  <tr :class="cn('border-b border-border transition-colors hover:bg-foreground/10', props.class)">
     <slot />
   </tr>
 </template>

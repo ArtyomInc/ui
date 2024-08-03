@@ -55,7 +55,7 @@ function handlePaste(event: ClipboardEvent) {
   <div
     :class="
       cn(
-        'relative inline-flex h-9 items-center rounded-md border border-border bg-default px-3 py-1 text-default-foreground shadow-sm transition-colors [border-style:solid] file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-default-foreground/50 focus-visible:outline-none',
+        'relative inline-flex h-9 items-center rounded-md border border-border bg-default px-3 py-1 text-default-foreground shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-default-foreground/50 focus-visible:outline-none',
         {
           'pointer-events-none opacity-50': props.disabled
         },

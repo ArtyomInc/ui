@@ -52,7 +52,8 @@ const components = [
     ],
     name: 'table'
   },
-  { files: ['index.ts', 'TextArea.vue'], name: 'textarea' },
+  { files: ['index.ts', 'Tabs.vue', 'TabsContent.vue', 'TabsList.vue', 'TabsTrigger.vue'], name: 'tabs' },
+  { files: ['index.ts', 'TextArea.vue'], name: 'text-area' },
   { files: ['index.ts', 'ThemeButton.vue'], name: 'theme-button' },
   { files: ['index.ts', 'Toggle.vue'], name: 'toggle' },
   {

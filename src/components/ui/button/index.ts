@@ -3,7 +3,7 @@ import { type VariantProps, cva } from 'class-variance-authority'
 export { default as Button } from './Button.vue'
 
 export const buttonVariants = cva(
-  'flex cursor-pointer items-center justify-center gap-2 overflow-hidden whitespace-nowrap text-nowrap rounded-lg align-middle font-medium no-underline outline-none transition-[color_background-color] disabled:pointer-events-none disabled:opacity-50 [border-style:solid]',
+  'flex cursor-pointer items-center justify-center gap-2 overflow-hidden whitespace-nowrap text-nowrap rounded-lg align-middle font-medium no-underline outline-none transition-[color_background-color] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
   {
     defaultVariants: {
       size: 'default',

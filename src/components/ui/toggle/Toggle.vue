@@ -25,7 +25,7 @@ function toggle() {
   <button
     :class="
       cn(
-        'inline-flex h-8 w-8 items-center justify-center rounded-md bg-default text-sm font-medium transition-colors hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+        'inline-flex h-8 w-8 items-center justify-center rounded-md bg-default text-sm font-medium transition-colors hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
         { 'bg-foreground/10 text-foreground hover:bg-foreground/10': value },
         props.class
       )

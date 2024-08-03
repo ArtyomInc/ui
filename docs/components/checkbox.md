@@ -38,6 +38,6 @@ const value = ref(false)
 
 ## Multi-line content
 
-| Looks                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------ |
-| <ClientOnly><Checkbox disabled > The checkbox can display content<br/> on multiple lines.</Checkbox> </ClientOnly> |
+| Looks                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------- |
+| <ClientOnly><Checkbox  > The checkbox can display content<br/> on multiple lines.</Checkbox> </ClientOnly> |

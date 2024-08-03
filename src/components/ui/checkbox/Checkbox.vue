@@ -30,7 +30,7 @@ function toggle() {
     <button
       :class="
         cn(
-          'flex h-6 w-6 shrink-0 items-center justify-center rounded border border-transparent bg-primary text-primary-foreground transition-colors [border-style:solid] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
+          'flex h-6 w-6 shrink-0 items-center justify-center rounded border border-transparent bg-primary text-primary-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
           {
             'border-border bg-transparent': !value
           },

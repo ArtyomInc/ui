@@ -72,7 +72,7 @@ import {
 // @ts-ignore
 import ExampleOfTable from '@/samples/Table.vue'
 // @ts-ignore
-import { Tab, Tabs } from '@/components/ui/tabs'
+import { Tabs } from '@/components/ui/tabs'
 // @ts-ignore
 import ExampleOfTabs from '@/samples/Tabs.vue'
 // @ts-ignore
@@ -93,6 +93,9 @@ import { Tooltip } from '@/components/ui/tooltip'
 import ExampleOfTooltip from '@/samples/Tooltip.vue'
 import { createPinia } from 'pinia'
 import DefaultTheme from 'vitepress/theme'
+// prettier-ignore
+import './styles/vitepress/base.css'
+// prettier-ignore
 import './styles/main.css'
 import './styles/tailwind.css'
 
@@ -161,7 +164,6 @@ export default {
     app.component('ExampleOfTable', ExampleOfTable)
     //Tabs
     app.component('Tabs', Tabs)
-    app.component('Tab', Tab)
     app.component('ExampleOfTabs', ExampleOfTabs)
     //TextArea
     app.component('TextArea', TextArea)

@@ -29,7 +29,7 @@ function toggle() {
     <button
       :class="
         cn(
-          'pointer-events-none block w-9 rounded-full bg-default p-0.5 ring-ring transition-transform focus:ring focus-visible:outline-none',
+          'pointer-events-none block w-9 rounded-full bg-default p-0.5 ring-ring transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
           {
             'bg-primary': value,
             'bg-primary/20': !value
