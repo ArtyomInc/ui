@@ -10,11 +10,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "bun run lint && bun run type-check && bun run format && bun run vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "bun run lint && bun run type-check && bun run format && bun run vite build",
     "preview": "vite preview",
-    "build-only": "bun run lint && bun run type-check && bun run format && bun run vite build",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --fix",
+    "lint": "bunx eslint . --fix",
     "format": "prettier --write src/"
   },
   "dependencies": {

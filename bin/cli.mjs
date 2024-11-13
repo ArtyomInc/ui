@@ -124,7 +124,7 @@ program
       const execPromise = util.promisify(exec)
       for (const dependency of dependencies) {
         try {
-          const { stderr, stdout } = await execPromise(`npm install ${dependency.dev ? '-D' : ''} ${dependency.name}`)
+          const { stderr } = await execPromise(`npm install ${dependency.dev ? '-D' : ''} ${dependency.name}`)
           if (stderr) {
             console.error(`Failed to install ${dependency.name}`)
           } else {

@@ -1,23 +1,15 @@
-import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 import vueTsEslintConfig from '@vue/eslint-config-typescript'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
 import pluginVue from 'eslint-plugin-vue'
 
 export default [
   {
-    files: ['**/*.{ts,mts,tsx,vue}'],
-    name: 'app/files-to-lint'
+    ignores: ['node_modules/**/*', 'dist/**/*']
   },
-
-  {
-    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
-    name: 'app/files-to-ignore'
-  },
-
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
-
   {
+    files: ['**/*{.ts,.mts,.tsx,.vue,.js,.jsx}'],
     plugins: {
       perfectionist: perfectionistPlugin
     },
@@ -55,7 +47,5 @@ export default [
       'vue/multi-word-component-names': 'off',
       'vue/require-default-prop': 'off'
     }
-  },
-
-  skipFormatting
+  }
 ]

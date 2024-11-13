@@ -14,20 +14,18 @@ import { ThemeButton } from '@/components/ui/theme-button'
           >Home
           <span
             class="absolute bottom-0 left-0 h-1 w-0 bg-foreground/50 transition-[width] duration-300 group-hover:w-full group-hover:bg-foreground"
-          ></span>
+          />
         </router-link>
         <router-link class="nav-link group" to="/guide"
           >Guide
           <span
             class="absolute bottom-0 left-0 h-1 w-0 bg-foreground/50 transition-[width] duration-300 group-hover:w-full group-hover:bg-foreground"
-          ></span
-        ></router-link>
+        /></router-link>
         <router-link class="nav-link group" to="/components"
           >Components
           <span
             class="absolute bottom-0 left-0 h-1 w-0 bg-foreground/50 transition-[width] duration-300 group-hover:w-full group-hover:bg-foreground"
-          ></span
-        ></router-link>
+        /></router-link>
         <div class="nav-link w-[calc(3.5rem+1px)]"><ThemeButton /></div>
       </nav>
     </div>
