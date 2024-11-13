@@ -1,17 +1,31 @@
 import vue from '@vitejs/plugin-vue'
-import path from 'node:path'
+import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  define: {
-    global: {}
+  build: {
+    rollupOptions: {
+      plugins: [
+        {
+          name: 'raw-loader',
+          transform(code, id) {
+            if (id.endsWith('.vue')) {
+              return {
+                code: `export default ${JSON.stringify(code)}`,
+                map: null
+              }
+            }
+          }
+        }
+      ]
+    }
   },
-  plugins: [vue()],
+  plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      src: path.resolve(__dirname, 'src')
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
 })

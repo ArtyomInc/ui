@@ -21,7 +21,7 @@ jobs:
         run: |
           bun install
           bun run build
-          ls docs/.vitepress/dist
+          ls -la dist/
 
       - name: Deploy to server
         uses: appleboy/scp-action@v0.1.7
@@ -29,7 +29,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: 'docs/.vitepress/dist/*'
+          source: 'dist/*'
           rm: true
           target: /var/www/html/ui.arduc.ch
-          strip_components: 3
+          strip_components: 1

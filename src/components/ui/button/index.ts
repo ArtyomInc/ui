@@ -11,8 +11,8 @@ export const buttonVariants = cva(
     },
     variants: {
       size: {
-        default: 'h-8 px-3 py-2',
-        icon: 'h-8 w-8'
+        default: 'h-8 min-h-8 px-3 py-2',
+        icon: 'h-8 w-8 min-w-8 min-h-8'
       },
       variant: {
         danger:
