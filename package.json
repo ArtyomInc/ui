@@ -18,11 +18,17 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@iconify/vue": "^4.1.2",
     "@types/prismjs": "^1.26.5",
+    "@vueuse/core": "^11.2.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "eslint-plugin-perfectionist": "^3.9.1",
     "pinia": "^2.2.6",
     "prismjs": "^1.29.0",
+    "radix-vue": "^1.9.9",
     "raw-loader": "^4.0.2",
+    "tailwind-merge": "^2.5.4",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
