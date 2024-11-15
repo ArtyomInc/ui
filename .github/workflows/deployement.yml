@@ -20,6 +20,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           bun install
+          bun run copy
           bun run build
           ls -la dist/
 

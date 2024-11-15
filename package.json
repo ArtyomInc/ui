@@ -9,6 +9,7 @@
   "author": "ArtyomInc",
   "license": "MIT",
   "scripts": {
+    "copy": "node ./script/copy-components.mjs",
     "dev": "bun run lint && bun run type-check && bun run format && bun run vite",
     "build": "bun run lint && bun run type-check && bun run format && bun run vite build",
     "preview": "vite preview",
