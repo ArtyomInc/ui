@@ -38,7 +38,7 @@
       </p>
       <PreCode
         lang="sh"
-        code="npm install -D tailwindcss autoprefixer postcss
+        code="npm install -D tailwindcss autoprefixer postcss tailwindcss-animate
 npx tailwindcss init -p"
         class="mb-2"
       />

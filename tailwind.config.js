@@ -2,11 +2,7 @@ import animate from 'tailwindcss-animate'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './docs/.vitepress/theme/**/*.{vue,js,ts,jsx,tsx,md}',
-    './docs/components/**/*.{vue,js,ts,jsx,tsx,md}',
-    './src/**/*.{vue,js,ts,md}'
-  ],
+  content: ['./src/**/*.{vue,js,ts,md}'],
   darkMode: 'class',
   plugins: [animate],
   theme: {
