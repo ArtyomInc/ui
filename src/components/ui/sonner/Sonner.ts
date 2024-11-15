@@ -10,8 +10,8 @@ interface Sonner {
 export const useSonner = defineStore('sonner', () => {
   const state = ref<Sonner | null>(null)
   const duration = 3000
-  let appearTimeout: NodeJS.Timeout
-  let disappearTimeout: NodeJS.Timeout
+  let appearTimeout: number
+  let disappearTimeout: number
 
   function trig(sonner: Sonner) {
     clearTimeout(appearTimeout)

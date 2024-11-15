@@ -30,34 +30,40 @@
       <p>How to install dependencies and structure your app.</p>
       <h3>1. Create project</h3>
       <p>Start by creating a new Vue project using <Code>vite</Code></p>
-      <PreCode class="mb-2">npm create vite@latest</PreCode>
+      <PreCode lang="sh" code="npm create vite@latest" class="mb-2" />
       <h3>2. Add Tailwind and it's configuration</h3>
       <p>
         Install <Code>tailwindcss</Code> and its peer dependencies, then generate your tailwind.config.js and configure
         postcss plugins
       </p>
-      <PreCode class="mb-2">npm install -D tailwindcss autoprefixer postcss<br />npx tailwindcss init -p</PreCode>
-
+      <PreCode
+        lang="sh"
+        code="npm install -D tailwindcss autoprefixer postcss
+npx tailwindcss init -p"
+        class="mb-2"
+      />
+      <PreCode lang="js" :code="tailwind_config_js" />
       <h3>3. Edit tsconfig/jsconfig.json</h3>
       <p>
         Add the code below to the compilerOptions of your <Code>tsconfig.json</Code> so your app can resolve paths
         without error
       </p>
-      <PreCode class="mb-2">{{ tsConfig }}</PreCode>
+      <PreCode lang="json" :code="tsconfig_app_json" class="mb-2" />
       <h3>4. Update vite.config.ts</h3>
       <p>Add the code below to the vite.config.ts so your app can resolve paths without error</p>
-      <PreCode>{{ viteConfig }}</PreCode>
+      <PreCode lang="ts" :code="vite_config_ts" />
       <h3>5. Run the CLI</h3>
-      <PreCode>npx @artyominc/ui start</PreCode>
+      <PreCode lang="sh" code="npx @artyominc/ui start" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import tailwind_config_js from '@/../tailwind.config.js?raw'
+import tsconfig_app_json from '@/../tsconfig.app.json?raw'
+import vite_config_ts from '@/../vite.config.ts?raw'
 import { Code } from '@/components/ui/code'
 import { PreCode } from '@/components/ui/pre-code'
-import tsConfig from '@/docs/tsconfig.json?raw'
-import viteConfig from '@/docs/vite.config.ts?raw'
 </script>
 
 <style scoped>
